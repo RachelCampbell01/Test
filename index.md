@@ -80,12 +80,12 @@
     function searchTable3() {
       var input, filter, found, table, tr, td, i, j;
       input = document.getElementById("myInput3");
-      filter = parseFloat(input.value);
+      filter = input.value;
       table = document.getElementById("myTable").value;
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (parseFloat(td[2].innerHTML) <= filter) {
+          if (parseFloat(td[2].innerHTML) <= parseFloat(filter)) {
                   found = true;
           }
           if (found) {
@@ -100,12 +100,12 @@
     function searchTable4() {
       var input, filter, found, table, tr, td, i, j;
       input = document.getElementById("myInput4");
-      filter = parseFloat(input.value);
+      filter = input.value;
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (parseFloat(td[2].innerHTML) >= filter) {
+          if (parseFloat(td[2].innerHTML) >= parseFloat(filter)) {
                   found = true;
           }
           if (found) {
