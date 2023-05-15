@@ -1,7 +1,9 @@
 <html>
   <body>
     <h> Hello </h>
-    <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'>
+    <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> <br>
+    <input id='myInput2' onkeyup='searchTable2()' type='text' placeholder='Type here to search part 2'> <br>
+    
       <table border="1" class="dataframe" id='myTable'>
       <thead>
         <tr style="text-align: right;" class='header'>
@@ -39,6 +41,26 @@
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
           if (td[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  found = true;
+          }
+          if (found) {
+              tr[i].style.display = "";
+              found = false;
+          } else {
+              tr[i].style.display = "none";
+          }
+      }
+    }
+      
+    function searchTable2() {
+      var input, filter, found, table, tr, td, i, j;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 1; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td");
+          if (td[1].innerHTML.toUpperCase()==filter) {
                   found = true;
           }
           if (found) {
