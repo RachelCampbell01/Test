@@ -6,9 +6,7 @@
     <p> Filter by link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> </p> <br>
     <p> Filter by crossing number: <input id='myInput2' onkeyup='searchTable2()' type='text' placeholder='Type here to search part 2'> </p>
     <p> Filter by volume: </p> <br>
-    <p> Less than: <input id='myInput3' onkeyup='searchTable3()' type='text' placeholder='Type here to search part 3'> </p>
-    <br>
-    <p> Greater than: <input id='myInput4' onkeyup='searchTable4()' type='text' placeholder='Type here to search part 4'> </p>
+    <p> Less than: <input id='myInput3' onkeyup='searchTable3()' type='text' placeholder='Type here to search part 3'>. Greater than: <input id='myInput4' onkeyup='searchTable4()' type='text' placeholder='Type here to search part 4'>. </p>
     <br>
     
       <table class="dataframe" id='myTable'>
@@ -107,7 +105,7 @@
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (parseFloat(td[2].innerHTML.value) >= filter) {
+          if (parseFloat(td[2].innerHTML) >= filter) {
                   found = true;
           }
           if (found) {
