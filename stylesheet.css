@@ -1,7 +1,13 @@
 body {
-  background-color: lightblue;
+  background-color: #e8d7fc;
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 th {
-  background-color: #DFB8FF;
+  background-color: #9D9AFC;
 }
