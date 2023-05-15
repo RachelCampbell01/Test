@@ -2,7 +2,7 @@
   <body>
     <h> Hello </h> <br>
     <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> <br>
-    <input id='myInput2' onkeyup='searchTable2()' type='text' placeholder='Type here to search part 2'> <br>
+    <input id='myInput2' onkeyup='searchTable2()' type='number' placeholder='Type here to search part 2'> <br>
     
       <table border="1" class="dataframe" id='myTable'>
       <thead>
@@ -60,7 +60,7 @@
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (td[1].innerHTML.toUpperCase() === filter) {
+          if (td[1].innerHTML === filter) {
                   found = true;
           }
           if (found) {
