@@ -60,7 +60,7 @@
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (td[1].innerHTML.toUpperCase() === 6) {
+          if (td[1].innerHTML.toUpperCase() === filter) {
                   found = true;
           }
           if (found) {
