@@ -51,10 +51,10 @@
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (input == "" || td[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                  if (input2 == "" || td[1].innerHTML === filter2) {
-                    if (input3 == "" || parseFloat(td[2].innerHTML) <= parseFloat(filter3)) {
-                      if (input4 == "" || parseFloat(td[2].innerHTML) >= parseFloat(filter4) {
+          if (filter == "" || td[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  if (filter2 == "" || td[1].innerHTML === filter2) {
+                    if (filter3 == "" || parseFloat(td[2].innerHTML) <= parseFloat(filter3)) {
+                      if (filter4 == "" || parseFloat(td[2].innerHTML) >= parseFloat(filter4) {
                         found = true;
                       }
                     }
