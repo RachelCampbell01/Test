@@ -55,12 +55,12 @@
     function searchTable2() {
       var input, filter, found, table, tr, td, i, j;
       input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
+      filter = input.value;
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (td[1].innerHTML.toUpperCase()==filter) {
+          if (td[1]==filter) {
                   found = true;
           }
           if (found) {
