@@ -54,7 +54,7 @@
       
     function searchTable2() {
       var input, filter, found, table, tr, td, i, j;
-      input = document.getElementById("myInput");
+      input = document.getElementById("myInput2");
       filter = input.value.toUpperCase();
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
