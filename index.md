@@ -10,7 +10,7 @@
     <input id='myInput2' onkeyup='searchTable2()' type='text' placeholder='Type here to search part 2'> <br>
     <br>
     
-      <table border="1" class="dataframe" id='myTable'>
+      <table class="dataframe" id='myTable'>
       <thead>
         <tr style="text-align: right;" class='header'>
           <th></th>
