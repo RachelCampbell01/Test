@@ -3,10 +3,10 @@
 <link rel="stylesheet" href="stylesheet.css">
 </head>
   <body>
-    <p> Filter by link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> </p> <br>
-    <p> Filter by crossing number: <input id='myInput2' onkeyup='searchTable2()' type='text' placeholder='Type here to search part 2'> </p>
-    <p> Filter by volume: </p> <br>
-    <p> Less than: <input id='myInput3' onkeyup='searchTable3()' type='text' placeholder='Type here to search part 3'>. Greater than: <input id='myInput4' onkeyup='searchTable4()' type='text' placeholder='Type here to search part 4'>. </p>
+    <p> Filter by link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> </p> 
+    <p> Filter by crossing number: <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here to search part 2'> </p>
+    <p> Filter by volume: </p>
+    <p> Less than: <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here to search part 3'>. Greater than: <input id='myInput4' onkeyup='searchTable()' type='text' placeholder='Type here to search part 4'>. </p>
     <br>
     
       <table class="dataframe" id='myTable'>
@@ -40,72 +40,18 @@
     function searchTable() {
       var input, filter, found, table, tr, td, i, j;
       input = document.getElementById("myInput");
+      input2 = document.getElementById("myInput2");
+      input3 = document.getElementById("myInput3");
+      input4 = document.getElementById("myInput4");
       filter = input.value.toUpperCase();
+      filter2 = input2.value;
+      filter3 = input3.value;
+      filter4 = input4.value;
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (td[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                  found = true;
-          }
-          if (found) {
-              tr[i].style.display = "";
-              found = false;
-          } else {
-              tr[i].style.display = "none";
-          }
-      }
-    }
-      
-    function searchTable2() {
-      var input, filter, found, table, tr, td, i, j;
-      input = document.getElementById("myInput2");
-      filter = input.value;
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 1; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td");
-          if (td[1].innerHTML === filter) {
-                  found = true;
-          }
-          if (found) {
-              tr[i].style.display = "";
-              found = false;
-          } else {
-              tr[i].style.display = "none";
-          }
-      }
-    }
-                                
-    function searchTable3() {
-      var input, filter, found, table, tr, td, i, j;
-      input = document.getElementById("myInput3");
-      filter = input.value;
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 1; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td");
-          if (parseFloat(td[2].innerHTML) <= parseFloat(filter)) {
-                  found = true;
-          }
-          if (found) {
-              tr[i].style.display = "";
-              found = false;
-          } else {
-              tr[i].style.display = "none";
-          }
-      }
-    }
-                                       
-    function searchTable4() {
-      var input, filter, found, table, tr, td, i, j;
-      input = document.getElementById("myInput4");
-      filter = input.value;
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 1; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td");
-          if (parseFloat(td[2].innerHTML) >= parseFloat(filter)) {
+          if (td[0].innerHTML.toUpperCase().indexOf(filter) > -1 && td[1].innerHTML === filter2 && parseFloat(td[2].innerHTML) <= parseFloat(filter3) && parseFloat(td[2].innerHTML) >= parseFloat(filter4)) {
                   found = true;
           }
           if (found) {
