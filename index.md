@@ -3,13 +3,15 @@
 <link rel="stylesheet" href="stylesheet.css">
 </head>
   <body>
-    <h> Filter results by: </h>
+    <h1> <u> Filter results by: </u> </h1>
     
     <p> Link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> </p> 
     <p> Crossing number: <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here to search part 2'> </p>
     <p> Volume: Greater than: <input id='myInput4' onkeyup='searchTable()' type='text' placeholder='Type here to search part 4'>, less than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here to search part 3'>. </p>
     <p> No. Tetrahedra: <input id='myInput5' onkeyup='searchTable()' type='text' placeholder='Type here to search part 2'> </p>
     <br>
+    
+    <h1> <u> Table: </u> </h1>
     
       <table class="dataframe" id='myTable'>
       <thead>
