@@ -18,7 +18,7 @@
         <tr>
           <th>0</th>
           <td>L6a5</td>
-          <td>6</td>
+          <td>60</td>
           <td>5.333490</td>
           <td>6</td>
         </tr>
@@ -55,12 +55,12 @@
     function searchTable2() {
       var input, filter, found, table, tr, td, i, j;
       input = document.getElementById("myInput2");
-      filter = input.value.toUpperCase();
+      filter = input.value;
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (td[1].innerHTML.toUpperCase().indexOf(filter) > -1) {
+          if (td[1].innerHTML.toUpperCase() === 6) {
                   found = true;
           }
           if (found) {
