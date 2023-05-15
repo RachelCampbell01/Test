@@ -1,9 +1,12 @@
 <html>
+<head>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
   <body>
     <h> Hello </h> <br>
-    <p Filter by link name </p>
+    <p> Filter by link name </p>
     <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> <br>
-    <p Filter by crossing number </p>
+    <p> Filter by crossing number </p>
     <input id='myInput2' onkeyup='searchTable2()' type='text' placeholder='Type here to search part 2'> <br>
     <br>
     
