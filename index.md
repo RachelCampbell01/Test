@@ -4,7 +4,7 @@
     <input id='myInput' onkeyup='searchTable()' type='text'>
       <table border="1" class="dataframe" id='myTable'>
       <thead>
-        <tr style="text-align: right;">
+        <tr style="text-align: right;" class='header'>
           <th></th>
           <th>LinkName</th>
           <th>No.Crossings</th>
