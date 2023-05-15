@@ -3,23 +3,23 @@
 <link rel="stylesheet" href="stylesheet.css">
 </head>
   <body>
-    <h1> <u> Filter results by: </u> </h1>
+    <h1> <u> Filter results by </u> </h1>
     
     <p> Link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here'> </p> 
     <p> Crossing number: <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here'> </p>
-    <p> Volume: Greater than: <input id='myInput4' onkeyup='searchTable()' type='text' placeholder='Type here'>, less than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here'>. </p>
-    <p> No. Tetrahedra: <input id='myInput5' onkeyup='searchTable()' type='text' placeholder='Type here'> </p>
+    <p> Volume: Greater than <input id='myInput4' onkeyup='searchTable()' type='text' placeholder='Type here'>, less than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here'> </p>
+    <p> No. tetrahedra: <input id='myInput5' onkeyup='searchTable()' type='text' placeholder='Type here'> </p>
     
-    <h1> <u> Table: </u> </h1>
+    <h1> <u> Table </u> </h1>
     
       <table class="dataframe" id='myTable'>
       <thead>
         <tr style="text-align: right;" class='header'>
           <th></th>
-          <th>LinkName</th>
-          <th>No.Crossings</th>
+          <th>Link Name</th>
+          <th>No. Crossings</th>
           <th>Volume</th>
-          <th>No.Tetrahedra</th>
+          <th>No. Tetrahedra</th>
         </tr>
       </thead>
       <tbody>
