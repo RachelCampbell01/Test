@@ -3,10 +3,12 @@
 <link rel="stylesheet" href="stylesheet.css">
 </head>
   <body>
-    <p> Filter by link name </p>
-    <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> <br>
-    <p> Filter by crossing number </p>
-    <input id='myInput2' onkeyup='searchTable2()' type='text' placeholder='Type here to search part 2'> <br>
+    <p> Filter by link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here to search'> </p> <br>
+    <p> Filter by crossing number: <input id='myInput2' onkeyup='searchTable2()' type='text' placeholder='Type here to search part 2'> </p>
+    <p> Filter by volume: </p> <br>
+    <p> Less than: <input id='myInput3' onkeyup='searchTable3()' type='text' placeholder='Type here to search part 3'> </p>
+    <br>
+    <p> Greater than: <input id='myInput4' onkeyup='searchTable4()' type='text' placeholder='Type here to search part 4'> </p>
     <br>
     
       <table class="dataframe" id='myTable'>
@@ -66,6 +68,46 @@
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
           if (td[1].innerHTML === filter) {
+                  found = true;
+          }
+          if (found) {
+              tr[i].style.display = "";
+              found = false;
+          } else {
+              tr[i].style.display = "none";
+          }
+      }
+    }
+                                
+    function searchTable3() {
+      var input, filter, found, table, tr, td, i, j;
+      input = document.getElementById("myInput3");
+      filter = input.value;
+      table = document.getElementById("myTable").value;
+      tr = table.getElementsByTagName("tr");
+      for (i = 1; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td");
+          if (td[2].innerHTML <= filter) {
+                  found = true;
+          }
+          if (found) {
+              tr[i].style.display = "";
+              found = false;
+          } else {
+              tr[i].style.display = "none";
+          }
+      }
+    }
+                                       
+    function searchTable4() {
+      var input, filter, found, table, tr, td, i, j;
+      input = document.getElementById("myInput4");
+      filter = input.value;
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 1; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td");
+          if (td[2].innerHTML.value >= filter) {
                   found = true;
           }
           if (found) {
