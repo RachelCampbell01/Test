@@ -54,7 +54,7 @@
           if (td[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
                   if (td[1].innerHTML === filter2) {
                     if (parseFloat(td[2].innerHTML) <= parseFloat(filter3)) {
-                      if (parseFloat(td[2].innerHTML) >= parseFloat(filter4) {
+                      if (parseFloat(td[2].innerHTML) >= parseFloat(filter4)) {
                         found = true;
                       }
                     }
