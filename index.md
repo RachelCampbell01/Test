@@ -60,7 +60,7 @@
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
-          if (td[1].textContent==filter) {
+          if (td[1].textContent===filter) {
                   found = true;
           }
           if (found) {
