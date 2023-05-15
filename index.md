@@ -5,10 +5,10 @@
   <body>
     <h1> <u> Filter results by </u> </h1>
     
-    <p> Link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 50px;"> </p> 
-    <p> Crossing number: <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here'> </p>
-    <p> Volume: Greater than <input id='myInput4' onkeyup='searchTable()' type='text' placeholder='Type here'>, less than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here'> </p>
-    <p> No. tetrahedra: <input id='myInput5' onkeyup='searchTable()' type='text' placeholder='Type here'> </p>
+    <p> Link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p> 
+    <p> Crossing number: <input id='myInput2' onkeyup='searchTable()' type='text' style="width: 40px;"> </p>
+    <p> Volume: Greater than <input id='myInput4' onkeyup='searchTable()' type='text' style="width: 100px;">, less than <input id='myInput3' onkeyup='searchTable()' type='text' style="width: 100px;"> </p>
+    <p> No. tetrahedra: <input id='myInput5' onkeyup='searchTable()' type='text' style="width: 40px;"> </p>
     
     <h1> <u> Table </u> </h1>
     
