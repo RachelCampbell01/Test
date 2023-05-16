@@ -6,15 +6,15 @@
     <h1> <u> Filter results by </u> </h1>
     
     <p> Link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p> 
-    <p> Crossing number: <input id='myInput2' onkeyup='searchTable()' type='text' style="width: 40px;"> </p>
-    <p> Volume: Greater than <input id='myInput4' onkeyup='searchTable()' type='text' style="width: 100px;">, less than <input id='myInput3' onkeyup='searchTable()' type='text' style="width: 100px;"> </p>
-    <p> No. tetrahedra: <input id='myInput5' onkeyup='searchTable()' type='text' style="width: 40px;"> </p>
+    <p> Crossing number: Equal to <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput4' onkeyup='searchTable()' type='text' style=placeholder='Type here' style="width: 100px;"> </p>
+    <p> Volume: Greater than <input id='myInput5' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput6' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
+    <p> No. tetrahedra: Equal to <input id='myInput7' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput8' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput9' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     
     <h1> <u> Table </u> </h1>
     
       <table class="dataframe" id='myTable'>
       <thead>
-        <tr style="text-align: right;" class='header'>
+        <tr class='header'>
           <th></th>
           <th>Link Name</th>
           <th>No. Crossings</th>
@@ -201,21 +201,37 @@
       input3 = document.getElementById("myInput3");
       input4 = document.getElementById("myInput4");
       input5 = document.getElementById("myInput5");
+      input6 = document.getElementById("myInput6");
+      input7 = document.getElementById("myInput7");
+      input8 = document.getElementById("myInput8");
+      input9 = document.getElementById("myInput9");
       filter = input.value.toUpperCase();
       filter2 = input2.value;
       filter3 = input3.value;
       filter4 = input4.value;
       filter5 = input5.value;
+      filter6 = input6.value;
+      filter7 = input7.value;
+      filter8 = input8.value;
+      filter9 = input9.value;
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
           if (!filter || td[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
                   if (!filter2 || td[1].innerHTML === filter2) {
-                    if (!filter3 || parseFloat(td[2].innerHTML) <= parseFloat(filter3)) {
-                      if (!filter4 || parseFloat(td[2].innerHTML) >= parseFloat(filter4)) {
-                        if (!filter5 || td[3].innerHTML === filter5) {
-                          found = true;
+                    if (!filter3 || parseFloat(td[1].innerHTML) >= parseFloat(filter3)) {
+                      if (!filter4 || parseFloat(td[1].innerHTML) <= parseFloat(filter4)) {
+                        if (!filter5 || parseFloat(td[2].innerHTML) >= parseFloat(filter5)) {
+                          if (!filter6 || parseFloat(td[2].innerHTML) <= parseFloat(filter6)) {
+                            if (!filter7 || td[3].innerHTML === filter7) {
+                              if (!filter8 || parseFloat(td[3].innerHTML) >= parseFloat(filter8)) {
+                                if (!filter9 || parseFloat(td[3].innerHTML) >= parseFloat(filter9)) {
+                                  found = true;
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
