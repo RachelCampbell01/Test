@@ -1,45 +1,18 @@
 <html>
 <head>
-<style>
-.content {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-</style>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
 <link rel="stylesheet" href="stylesheet.css">
 </head>
   <body>
-    <button type="button" class="collapsible">Filter results by</button>
-    <div class="content">
-    <h1> <u> Filter results by </u> </h1>
+    <h4> <u> Filter results by </u> </h4>
     
     <p> <b> Link name: </b> <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p> 
     <p> <b> Crossing number: </b> Equal to <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput4' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     <p> <b> Volume: </b> Greater than <input id='myInput5' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput6' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     <p> <b> No. tetrahedra: </b> Equal to <input id='myInput7' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput8' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput9' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
-    </div>
     
-    <h1> <u> Table </u> </h1>
+    <h2> <u> Table </u> </h2>
+    
+    <p> console.log(searchTable()) results </p>
     
       <table class="dataframe" id='myTable'>
       <thead>
@@ -224,7 +197,8 @@ for (i = 0; i < coll.length; i++) {
     </table>
     <script>
     function searchTable() {
-      var input, filter, found, table, tr, td, i, j;
+      var input, filter, found, table, tr, td, i, j, count;
+      count = 0;
       input = document.getElementById("myInput");
       input2 = document.getElementById("myInput2");
       input3 = document.getElementById("myInput3");
@@ -257,6 +231,7 @@ for (i = 0; i < coll.length; i++) {
                               if (!filter8 || parseFloat(td[3].innerHTML) >= parseFloat(filter8)) {
                                 if (!filter9 || parseFloat(td[3].innerHTML) >= parseFloat(filter9)) {
                                   found = true;
+                                  count++;
                                 }
                               }
                             }
@@ -273,6 +248,7 @@ for (i = 0; i < coll.length; i++) {
               tr[i].style.display = "none";
           }
       }
+      return count;
     }
     </script>
       
