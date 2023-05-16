@@ -6,7 +6,7 @@
     <h1> <u> Filter results by </u> </h1>
     
     <p> Link name: <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p> 
-    <p> Crossing number: Equal to <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput4' onkeyup='searchTable()' type='text' style=placeholder='Type here' style="width: 100px;"> </p>
+    <p> Crossing number: Equal to <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput4' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     <p> Volume: Greater than <input id='myInput5' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput6' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     <p> No. tetrahedra: Equal to <input id='myInput7' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput8' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput9' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     
