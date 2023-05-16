@@ -3,16 +3,14 @@
 <link rel="stylesheet" href="stylesheet.css">
 </head>
   <body>
-    <h4> <u> Filter results by </u> </h4>
+    <h1> <u> Filter results by </u> </h1>
     
     <p> <b> Link name: </b> <input id='myInput' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p> 
     <p> <b> Crossing number: </b> Equal to <input id='myInput2' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput3' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput4' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     <p> <b> Volume: </b> Greater than <input id='myInput5' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput6' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     <p> <b> No. tetrahedra: </b> Equal to <input id='myInput7' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> / Greater than <input id='myInput8' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;">, less than <input id='myInput9' onkeyup='searchTable()' type='text' placeholder='Type here' style="width: 100px;"> </p>
     
-    <h2> <u> Table </u> </h2>
-    
-    <p> <script>document.write(searchTable());</script> results </p>
+    <h1> <u> Table </u> </h1>
     
       <table class="dataframe" id='myTable'>
       <thead>
