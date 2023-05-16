@@ -12,7 +12,7 @@
     
     <h2> <u> Table </u> </h2>
     
-    <p> console.log(searchTable()) results </p>
+    <p> <script>document.write(searchTable());</script> results </p>
     
       <table class="dataframe" id='myTable'>
       <thead>
